@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <title>J.M.L. Enterprise Home Page</title>
     <style>
 /*
@@ -26,14 +27,12 @@
             border: 3px solid #37323E;
             border-radius: 15px;
             margin: 20px auto;
-            height: 275px;
-            width: 300px;
         }
         h2{
             text-align: center;
-
         }
         p{
+            box-sizing: border-box;
             text-align: center;
             margin: auto;
             width: 80%;
@@ -42,8 +41,17 @@
             font-family: 'Roboto';
 
         }
-        footer{
+        .tagline{
             text-align: center;
+            font-style: italic;
+            font-size: 20px;
+            color: #8F5C38;
+            margin-top: -10px;
+            margin-bottom: 15px;
+        }
+        .footer{
+            text-align: center;
+            font-size: 15px;
         }
         ul{
             list-style-position: inside;
@@ -67,6 +75,16 @@
         .contact-information{
             padding-top: 15px;
             padding-bottom: 15px;
+            text-align: center;
+            font-style: normal;
+
+        }
+        .contact-information a{
+            color: #37323E;
+            text-decoration: none;
+        }
+        .contact-information a:hover{
+            text-decoration: underline;
         }
         .divider{
 			width: 90%;
@@ -78,7 +96,8 @@
 <body>
     <header>
         <h1>Welcome to J.M.L. Enterprise</h1>
-        <img src="../images/jovialmountainlionlogo.jpg" alt="A smiling cartoon mountan lion smiling with the text jovial mount lion">
+        <p class="tagline">Snacks Delivered with Joy</p>
+        <img height ="275" width ="300" src="../images/jovialmountainlionlogo.jpg" alt="A smiling cartoon mountain lion smiling with the text jovial mount lion">
     </header>
     <main>
         <h2>Services of J.M.L. Enterprise</h2>
@@ -87,7 +106,7 @@
             At J.M.L. Enterprise we specialize in making custom snack packages for all your snacking needs.
             We are proficient in packaging and delivering all the treats and snacks you want right to your home.
             We have access to all kinds of chips, candy and drinks for you to pick. We also have premade care packages
-            that you can have delivered to your friends and family that far away. If you want a box of teets look no
+            that you can have delivered to your friends and family that far away. If you want a box of treats look no
             further than Jovial Mountain Lion Enterprise. 
   
         </p>
@@ -95,8 +114,8 @@
             Top Five Things About J.M.L Enterprise
         </p>
         <ul>
-            <li>Locialy Sorced             </li>
-            <li>Wide Verity of Products    </li>
+            <li>Locally Sourced             </li>
+            <li>Wide Variety of Products    </li>
             <li>Customer Focused Service   </li>
             <li>Customizable Snack Packages</li>
             <li>Convenient Delivery        </li>
@@ -109,13 +128,15 @@
 
         </p>
         <div class="divider"></div>
-        <p class="contact-information">
-            || jmlenterpries@gmail.com || 535-553-0923 || 1432 Max Anv ||
-        </p>
+        <address class="contact-information">
+            || <a href="mailo:jmlenterpries@gmail.com">jmlenterpries@gmail.com</a> || 
+                <a href="tel:535-553-0923">535-553-0923</a> || 
+                1432 Max Anv ||
+        </address>
     </main>
     <div class="divider"></div>
     <footer>
-			Page Created By J.M.L Enterprise
+			<p class="footer">J.M.L. Enterprise &copy; 2025 || Snacks Delivered with Joy</p>
 	</footer>
 </body>
 </html>
