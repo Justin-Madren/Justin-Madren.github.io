@@ -6,40 +6,72 @@
 		<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
 		<style>
-			body{
-				background-color: blanchedalmond;
-			}
-			.divider{
-				width: 90%;
-				border-bottom: 3px solid black;
-				margin: 0 auto 0;
-			}
-			h1{
-				font-family: 'Inter', Courier, monospace;
-				margin: auto;
-				width: 90%;
-				text-align: center;
-				padding-bottom: 15px;
-			}
-			h2{
-				font-family: 'Inter', Courier, monospace;
-				margin: auto;
-				width: 90%;
-				text-align: center;
-				padding-bottom: 50px;
-			}
-			p{
-				font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-				width: 80%;
-				margin: auto;
-				text-align: center;
-				margin-bottom: 15px;
-				margin-top: 15px;
-			}
-			footer{
-				text-align: center;
-				margin-top: 30px;
-			}
+		:root {
+            --niner-green: #046A38;
+            --niner-gold: #A49665;
+            --charlotte-black: #000000;
+            --charlotte-white: #FFFFFF;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--charlotte-white);
+            color: var(--charlotte-black);
+        }
+
+        header {
+            background-color: var(--niner-green);
+            color: var(--charlotte-white);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            color: var(--niner-green);
+            margin-top: 30px;
+            font-size: 1.5rem;
+        }
+
+        .divider {
+            width: 80%;
+            border-bottom: 3px solid var(--niner-gold);
+            margin: 20px auto;
+        }
+
+        p {
+            width: 75%;
+            margin: 15px auto;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--niner-green);
+            color: var(--charlotte-white);
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: var(--niner-gold);
+            text-decoration: none;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
 		</style>
 
 	</head>
@@ -54,22 +86,21 @@
 				I will be graduating UNCC in the Fall of 2026 with a Degree in Computer Science with a
                 consternation in cyber security. I have plans to pursue a masters in cyber security
                 by getting into the early access program to get a head start on achieving that goal.
-                I enjoy all things computers and learning more about them and understanding how they all work
-                together. 
 			</p>
 			<p>
-				I enjoy watching twitch streams and youtube videos and playing video games. My current favorite game
-                would have to be Balder's Gate 3 (BG3) it is a turn based combat game, it's basically a Dnd video game.
- 
+				I enjoy all things computers and learning more about them and understanding how they all work
+                together. I have some of my personal projects on my GitHub linked below feel free to check them
+				out.
 			</p>
 			<div class="divider"></div>
 		</main>
 		<footer>
-			<a href="itis3135/">Click to go to ITIS-3135 Site </a> ~ 
-			<a href="itis3135/introduction.html"> Click to know more about me</a> ~
-			<a href="https://github.com/Justin-Madren">Click to go to My GitHub Page</a> ~
-			<a href="https://justin-madren.github.io/">Click to go to my GitHub.io Page</a> ~ 
-			<a href="https://www.linkedin.com/in/justin-madren/">Click to go to my LinkedIN</a>
+			<a href="itis3135/">ITIS-3135 Site </a> ~ 
+			<a href="itis3135/introduction.html"> About me</a> ~
+			<a href="https://github.com/Justin-Madren">GitHub</a> ~
+			<a href="https://justin-madren.github.io/">GitHub.io</a> ~ 
+			<a href="https://www.linkedin.com/in/justin-madren/">LinkedIN</a>
+			
 		</footer>		
 				
 	</body>
