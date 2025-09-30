@@ -67,3 +67,16 @@ a:hover{
     color: goldenrod;
     text-decoration: underline;
 }
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin: auto;
+    background-color: darkgreen;
+    color: goldenrod; 
+}
+th, td{
+    padding-left: 15px;
+    padding-right: 15px;
+}
