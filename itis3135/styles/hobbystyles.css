@@ -1,7 +1,31 @@
+:root{
+    --oxfordBlue: #0a1128;
+    --pennBlue: #001f54;
+    --indigoDye: #034078;
+    --cerulean: #1282a2;
+    --white: #fefcfb;
+}
+header{
+    background-color: var(--cerulean);
+    color: var(--oxfordBlue);
+    padding: 20px 0;
+    text-align: center;
+}
+main{
+    background-color:azure;
+    padding-bottom: 15px;
+}
+footer p{
+    width: 100%;
+    background-color: var(--cerulean);
+    padding-top: 10px;
+    text-align: center;
+}
 h1{
     margin: 0 auto;
     text-align: center;
     font-size: 35px;
+
 }
 nav{
     margin: 0 auto;
@@ -10,6 +34,8 @@ nav{
     font-size: 18px;
 }
 h2{
+    margin-top: 0;
+    padding-top: 15px;
     text-align: center;
 }
 h3{
@@ -50,11 +76,11 @@ p{
 }
 a{
     text-decoration: none;
-    color: cadetblue;
+    color: var(--oxfordBlue);
 }
 a:hover{
     text-decoration: underline;
-    color: blue;
+    color: var(--white);
 }
 section {
   display: none;

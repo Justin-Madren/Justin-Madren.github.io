@@ -28,7 +28,9 @@ header{
     width: 100%;
     padding: 1em;
 }
-
+header p{
+    text-align: center;
+}
 a{
     text-decoration: none;
     color: var(--Pale-mint);
@@ -54,11 +56,13 @@ h2{
 p{
     width: 67%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding-bottom: 10px;
     padding-top: 10px;
 }
-
+.label{
+    text-align: center;
+}
 ul{
     margin: 0 auto;
     width: fit-content;
@@ -67,7 +71,7 @@ ul{
     padding-bottom: 20px;
 }
 
-footer{
+footer p{
     text-align: center;
     background-color: var(--fresh-green);
     color: var(--light-gray);
