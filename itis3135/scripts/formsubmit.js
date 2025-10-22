@@ -109,6 +109,14 @@ function generateIntroduction() {
 // DOMContentLoaded: setup (after function)
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
+    flatpickr("#ackDate", {
+        dateFormat: "Y-m-d",
+        defaultDate: "2025-10-21"
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("introForm");
   if (!form) return;
 
