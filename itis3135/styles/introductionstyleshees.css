@@ -80,6 +80,59 @@ th, td{
     padding-left: 15px;
     padding-right: 15px;
 }
+/* Center the form and add spacing */
+#introForm {
+    max-width: 700px;
+    margin: 20px auto;       /* center horizontally and add vertical spacing */
+    padding: 20px;
+    background-color: #fff;  /* white background */
+    border-radius: 10px;
+}
+
+/* Fieldsets */
+#introForm fieldset {
+    border: 1px solid #333;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+}
+
+/* Inputs and textareas */
+#introForm input,
+#introForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+#introForm .buttons button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkgreen;
+    color: white;
+    cursor: pointer;
+}
+
+#introForm .buttons button:hover {
+    background-color: goldenrod;
+    color: black;
+}
+
+/* Courses layout */
+#courseList .course {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#courseList .course input {
+    flex: 1;
+}
 
 @media screen and (max-width: 600px) {
     p {

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/introductionstyleshees.css">
+    <title>Justin Madren's Jovial Mountain lion || ITIS - 3135 Form Submition</title>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below.</h3>
+        <div class="divider"></div>
+        <!-- form skeleton: we'll add fields to this next -->
+        <form id="introForm" enctype="multipart/form-data" novalidate>
+            <!-- we'll add fieldsets and inputs in the next steps -->
+            <div id="formFields">
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="firstName">First Name:</label>
+                    <input 
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    value="Justin"
+                    placeholder="Enter you first name"
+                    required
+                    />
+
+                    <label for="middleName">Middle Name / Initial (optional):</label>
+                    <input type="text"
+                    id="middleName"
+                    name="middleName"
+                    placeholder="Enter your middle name or initial"
+                    >
+
+                    <label for="nickName">Prefered Name / NickName (optional):</label>
+                    <input type="text"
+                    id="nickName"
+                    name="nickName"
+                    placeholder="Enter you nickname">
+
+                    <label for="lastName">Last Name:</label>
+                    <input type="text"
+                    id="lastName"
+                    name="lastName"
+                    value="Madren"
+                    placeholder="Enter you last name"
+                    required>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Acknowlegment</legend>
+
+                    <label for="ackStatment">Acknowlegment Statment:</label>
+                    <textarea 
+                        name="ackStatment" 
+                        id="ackStatment"
+                        placeholder="Write your acknowlegment statement here"
+                        required>I acknowledge that this introduction is accurate to the best of my ability.
+                    </textarea>
+                    <label for="ackDate">Acknowlegment Date:</label>
+                    <input type="date"
+                    id="ackDate"
+                    name="ackDate"
+                    value="2025-10-21"
+                    required>
+
+                </fieldset>   
+                <fieldset>
+                    <legend>Mascot</legend>
+
+                    <label for="mascotAdj">Mascot Adjective:</label>
+                    <input type="text"
+                    id="mascotAdj"
+                    name="mascotAdj"
+                    value="Jovial"
+                    placeholder="Enter an adjtive that matches the first letter of your first name"
+                    required>
+
+                    <label for="mascotAnimal">Mascot Animal:</label>
+                    <input type="text"
+                    id="mascotAnimal"
+                    name="mascotAnimal"
+                    value="Mountain lion"
+                    placeholder="Enter an animal that matcher the first letter of you last name"
+                    required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Divider & Picture</legend>
+
+                    <label for="divider">Divider:</label>
+                    <input 
+                    type="text"
+                    id="divider"
+                    name="divider"
+                    value="~"
+                    placeholder="Enter a divider charter (~, |, ♥️)"
+                    required>
+
+                    <label for="picture">Picture:</label>
+                    <input 
+                    type="file"
+                    id="picture"
+                    name="picture"
+                    accept="image/*">
+
+                    <label for="caption">Picture Caption:</label>
+                    <input 
+                    type="text"
+                    id="caption"
+                    name="caption"
+                    value="My professional portrate"
+                    placeholder="Enter a caption for you picture"
+                    required>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Statment</legend>
+
+                    <label for="personalStatment">Write your personal statment:</label>
+                    <textarea 
+                        name="personalStatment" 
+                        id="personalStatment"
+                        rows="4"
+                        placeholder="Write a short inrotduction about yourself"
+                        required>Hello my name is Justin Madren this will be my senior year at UNCC. I enjoy playing video games right now. I am working my way through Balders Gate 3 in honor mode, I also enjoy drawing traditionally and on my tablet from time to time.
+                    </textarea>    
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="bullet1">Personal Background:</label>
+                    <textarea name="bullet1" id="bullet1" 
+                    required>I am a first generation college student meaning I am the first in my family to attend a four year university in pursuit of a bachelor's degree. I am an eagle scout and have been to the Philmont scouting range for a 11 day long backpacking trip. 
+                    </textarea>
+
+                    <label for="bullet2">Academic Background:</label>
+                    <textarea name="bullet2" id="bullet2" 
+                    required>Senior Computer Science Major with a Concentration in Cyber Security
+                    </textarea>
+
+                    <label for="bullet3">Professional Background:</label>
+                    <textarea name="bullet3" id="bullet3" 
+                    required>I have volunteered at my local church in the audio visual team from 2014 to today
+                    </textarea>
+
+                    <label for="bullet4">Primary Computer:</label>
+                    <textarea name="bullet4" id="bullet4" 
+                    required>A Dell Latitude 3550 laptop running windows 11 primary work location is my apartment
+                    </textarea>
+                </fieldset>
+                <fieldset>
+                    <label>Courses I’am Taking and Why:</label>
+                    <div id="courseList">
+                        <div class="course">
+                            <input type="text" name="department" placeholder="department" value="ITIS" required>
+                            <input type="text" name="number" id="number" value="3135" required>
+                            <input type="text" name="courceName" placeholder="courceName" value="Web Application Design" required>
+                            <input type="text" name="reason" id="reason" value="To enhance my web development skills" required>
+                            <button type="button" class="deleteCourse">Delete</button>
+                        </div>
+                        <div class="course">
+                            <input type="text" name="department" value="ITSC" required>
+                            <input type="text" name="number" value="3146" required>
+                            <input type="text" name="courseName" value="Intro to Operating Systems" required>
+                            <input type="text" name="reason" value="Learn OS fundamentals" required>
+                            <button type="button" class="deleteCourse">Delete</button>
+                        </div>
+
+                        <div class="course">
+                            <input type="text" name="department" value="ITIS" required>
+                            <input type="text" name="number" value="3200" required>
+                            <input type="text" name="courseName" value="Security & Privacy" required>
+                            <input type="text" name="reason" value="Cybersecurity fundamentals" required>
+                            <button type="button" class="deleteCourse">Delete</button>
+                        </div>
+
+                        <div class="course">
+                            <input type="text" name="department" value="ITSC" required>
+                            <input type="text" name="number" value="3135" required>
+                            <input type="text" name="courseName" value="Software Engineering" required>
+                            <input type="text" name="reason" value="Learn group project workflow" required>
+                            <button type="button" class="deleteCourse">Delete</button>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="bullet6">Favorite Quote:</label>
+                    <textarea name="bullet6" id="bullet6" 
+                    required>“That a person who helps others simply because it should or must be done, and because it is the right thing to do, is indeed without a doubt a real superhero.”
+                    </textarea>
+
+                    <label for="bullet7">Quote Author:</label>
+                    <input type="text" name="bullet7" id="bullet7" value="Stan Lee" required>
+                </fieldset>
+                <fieldset>
+                    <legend>Links</legend>
+
+                    <label for="link1">GitHub</label>
+                    <input type="url" id="link1" name="link1" placeholder="https://github.com/Justin-Madren" value="https://github.com/Justin-Madren" required>
+
+                    <label for="link2">GitHub.io</label>
+                    <input type="url" id="link2" name="link2" placeholder="https://justin-madren.github.io/" value="https://justin-madren.github.io/" required>
+
+                    <label for="link3">CLT Web</label>
+                    <input type="url" id="link3" name="link3" placeholder="https://webpages.charlotte.edu/jmadren1/" value="https://webpages.charlotte.edu/jmadren1/" required>
+
+                    <label for="link4">ITIS-3135</label>
+                    <input type="url" id="link4" name="link4" placeholder="https://justin-madren.github.io/itis3135/" value="https://justin-madren.github.io/itis3135/" required>
+
+                    <label for="link5">freeCodeCamp</label>
+                    <input type="url" id="link5" name="link5" placeholder="https://www.freecodecamp.org/jmadren1" value="https://www.freecodecamp.org/jmadren1" required>
+
+                    <label for="link6">codecademy</label>
+                    <input type="url" id="link6" name="link6" placeholder="https://www.codecademy.com/profiles/Jmadren1" value="https://www.codecademy.com/profiles/Jmadren1" required>
+
+                    <label for="link7">LinkedIn</label>
+                    <input type="url" id="link7" name="link7" placeholder="https://www.linkedin.com/in/justin-madren/" value="https://www.linkedin.com/in/justin-madren/" required>
+                </fieldset>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <button type="button" id="clearButton">Clear</button>
+                <button type="button" id="addCourseBtn">Add Course</button>
+            </div>
+        </form>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/formsubmit.js"></script>
+    <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
