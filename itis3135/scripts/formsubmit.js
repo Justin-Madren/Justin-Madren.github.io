@@ -18,9 +18,16 @@ function generateIntroduction() {
   // --- Picture handling (use uploaded or default)
   const pictureInput = form.picture;
   const imageFile = pictureInput && pictureInput.files ? pictureInput.files[0] : null;
-  const imageURL = imageFile
-    ? URL.createObjectURL(imageFile)
-    : (pictureInput && pictureInput.dataset && pictureInput.dataset.defaultImage) || "images/default.jpg";
+  let imageURL = "";
+
+  if (imageFile) {
+    imageURL = URL.createObjectURL(imageFile);
+  } else if (pictureInput && pictureInput.dataset.defaultImage) {
+    imageURL = pictureInput.dataset.defaultImage;
+  } else {
+    imageURL = "images/HeadShot2024.jpg"; // fallback
+  }
+
   const caption = form.caption ? form.caption.value.trim() : "";
 
   // --- Statements & bullets
@@ -56,19 +63,15 @@ function generateIntroduction() {
 
   const linksHTML = links.map((l) => `<a href="${l}" target="_blank">|| ${l} ||</a>`).join(" ");
 
-  // --- Build the final HTML in the correct order (image appears after acknowledgment)
+  // --- Build the final HTML (image stays visible)
   const resultHTML = `
     <section id="introResult">
       <h2>Introduction Form Result</h2>
 
       <h3>${lastName}${firstName ? " " + firstName : ""}${middleName ? " " + middleName : ""}${nickName ? ' ("' + nickName + '")' : ""}</h3>
 
-      <p style="text-align: center;">${ackStatement}${ackDate ? " " + ackDate : ""}</p>
-
-      
-
       <div class="photo-block">
-        <img src="${imageURL}" alt="${caption}" style="max-width:260px; display:block; margin:12px auto;">
+        <img src="${imageURL}" alt="${caption}" style="max-width:534px; display:block; margin:12px auto;">
         ${caption ? `<p class="caption" style="text-align:center; font-style:italic;">${caption}</p>` : ""}
       </div>
 
@@ -109,33 +112,43 @@ function generateIntroduction() {
 // DOMContentLoaded: setup (after function)
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
-    flatpickr("#ackDate", {
-        dateFormat: "Y-m-d",
-        defaultDate: "2025-10-21"
-    });
-});
+  // Setup flatpickr date picker
+  flatpickr("#ackDate", {
+    dateFormat: "Y-m-d",
+    defaultDate: "2025-10-21"
+  });
 
-
-document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("introForm");
   if (!form) return;
 
   const addCourseBtn = document.getElementById("addCourseBtn");
   const clearButton = document.getElementById("clearButton");
   const pictureInput = document.getElementById("picture");
+  const picturePreview = document.getElementById("picturePreview");
 
-  // set default image path (adjust if your default image is different)
-  if (pictureInput) {
-    pictureInput.dataset.defaultImage = "images/default.jpg";
+  // --- Default image & live preview setup ---
+  if (pictureInput && picturePreview) {
+    const defaultImagePath = "images/HeadShot2024.jpg";
+    pictureInput.dataset.defaultImage = defaultImagePath;
+
+    // Update preview when user selects a file
+    pictureInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        picturePreview.src = URL.createObjectURL(file);
+      } else {
+        picturePreview.src = defaultImagePath;
+      }
+    });
   }
 
-  // Submit listener (calls generateIntroduction which is already defined)
+  // --- Submit listener ---
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     generateIntroduction();
   });
 
-  // Add new course (clone template .course if exists)
+  // --- Add new course (clone template .course if exists) ---
   if (addCourseBtn) {
     addCourseBtn.addEventListener("click", () => {
       const courseList = document.getElementById("courseList");
@@ -143,12 +156,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const newCourse = document.createElement("div");
       newCourse.classList.add("course");
 
-      // If we have a template course, clone its markup (but clear values)
       if (firstCourse) {
         newCourse.innerHTML = firstCourse.innerHTML;
         newCourse.querySelectorAll("input").forEach((inp) => (inp.value = ""));
       } else {
-        // fallback: create inputs
         newCourse.innerHTML = `
           <input type="text" name="department" placeholder="department" required>
           <input type="text" name="number" placeholder="number" required>
@@ -160,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       courseList.appendChild(newCourse);
 
-      // attach delete handler
+      // Attach delete handler
       const del = newCourse.querySelector(".deleteCourse");
       if (del) {
         del.addEventListener("click", () => {
@@ -168,7 +179,6 @@ document.addEventListener("DOMContentLoaded", () => {
           if (all.length > 1) {
             newCourse.remove();
           } else {
-            // keep one course minimum
             alert("You must have at least one course.");
           }
         });
@@ -176,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Attach delete handlers to existing course delete buttons
+  // --- Attach delete handlers to existing course delete buttons ---
   const courseListEl = document.getElementById("courseList");
   if (courseListEl) {
     courseListEl.querySelectorAll(".deleteCourse").forEach((btn) => {
@@ -192,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Clear button: clear text inputs & textareas; reset file inputs
+  // --- Clear button: reset text inputs, textareas, and file inputs ---
   if (clearButton) {
     clearButton.addEventListener("click", () => {
       Array.from(form.querySelectorAll("input, textarea")).forEach((field) => {
@@ -200,6 +210,9 @@ document.addEventListener("DOMContentLoaded", () => {
           field.value = "";
         } else if (field.type === "file") {
           field.value = null;
+          if (picturePreview && pictureInput && pictureInput.dataset.defaultImage) {
+            picturePreview.src = pictureInput.dataset.defaultImage;
+          }
         }
       });
     });

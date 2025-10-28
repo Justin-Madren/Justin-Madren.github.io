@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/introductionstyleshees.css">
-    <title>Justin Madren's Jovial Mountain lion || ITIS - 3135 Form Submition</title>
+    <title>Justin Madren's Jovial Mountain lion || ITIS - 3135 Introduction Form</title>
 </head>
 <body>
     <div data-include="components/header.html"></div>
@@ -32,6 +32,7 @@
 
                     <label for="middleName">Middle Name / Initial (optional):</label>
                     <input type="text"
+                    value="M"
                     id="middleName"
                     name="middleName"
                     placeholder="Enter your middle name or initial"
@@ -52,25 +53,6 @@
                     required>
 
                 </fieldset>
-
-                <fieldset>
-                    <legend>Acknowlegment</legend>
-
-                    <label for="ackStatment">Acknowlegment Statment:</label>
-                    <textarea 
-                        name="ackStatment" 
-                        id="ackStatment"
-                        placeholder="Write your acknowlegment statement here"
-                        required>I acknowledge that this introduction is accurate to the best of my ability.
-                    </textarea>
-                    <label for="ackDate">Acknowlegment Date:</label>
-                    <input type="text"
-                    id="ackDate"
-                    name="ackDate"
-                    value="2025-10-21"
-                    required>
-
-                </fieldset>   
                 <fieldset>
                     <legend>Mascot</legend>
 
@@ -99,7 +81,7 @@
                     type="text"
                     id="divider"
                     name="divider"
-                    value="~"
+                    value="|"
                     placeholder="Enter a divider charter (~, |, ♥️)"
                     required>
 
@@ -109,6 +91,8 @@
                     id="picture"
                     name="picture"
                     accept="image/*">
+
+                    <img id="picturePreview" width="534" height="534" src="images/HeadShot2024.jpg" alt="A photo of Justin Madren from the neck with a gray background">
 
                     <label for="caption">Picture Caption:</label>
                     <input 
@@ -159,33 +143,33 @@
                     <label>Courses I’am Taking and Why:</label>
                     <div id="courseList">
                         <div class="course">
-                            <input type="text" name="department" placeholder="department" value="ITIS" required>
-                            <input type="text" name="number" id="number" value="3135" required>
-                            <input type="text" name="courceName" placeholder="courceName" value="Web Application Design" required>
-                            <input type="text" name="reason" id="reason" value="To enhance my web development skills" required>
+                            <input type="text" name="department" placeholder="Department" value="ITIS" required>
+                            <input type="text" name="number" id="number" placeholder="Cource Number" value="3135" required>
+                            <input type="text" name="courseName" placeholder="Cource Name" value="Web Application Design" required>
+                            <input type="text" name="reason" id="reason" placeholder="Reasion for taking" value="For an understanding of how web sites are built and how they work." required>
                             <button type="button" class="deleteCourse">Delete</button>
                         </div>
                         <div class="course">
-                            <input type="text" name="department" value="ITSC" required>
-                            <input type="text" name="number" value="3146" required>
-                            <input type="text" name="courseName" value="Intro to Operating Systems" required>
-                            <input type="text" name="reason" value="Learn OS fundamentals" required>
-                            <button type="button" class="deleteCourse">Delete</button>
-                        </div>
-
-                        <div class="course">
-                            <input type="text" name="department" value="ITIS" required>
-                            <input type="text" name="number" value="3200" required>
-                            <input type="text" name="courseName" value="Security & Privacy" required>
-                            <input type="text" name="reason" value="Cybersecurity fundamentals" required>
+                            <input type="text" name="department" placeholder="Department" value="ITSC" required>
+                            <input type="text" name="number" placeholder="Cource Number" value="3146" required>
+                            <input type="text" name="courseName" placeholder="Cource Name" value="Intro to Operating Systems" required>
+                            <input type="text" name="reason" placeholder="Reasion for taking" value="To understand how the OS functions and how networks work and how they are connected because everything has some form of networking because that is how computers talk to each other." required>
                             <button type="button" class="deleteCourse">Delete</button>
                         </div>
 
                         <div class="course">
-                            <input type="text" name="department" value="ITSC" required>
-                            <input type="text" name="number" value="3135" required>
-                            <input type="text" name="courseName" value="Software Engineering" required>
-                            <input type="text" name="reason" value="Learn group project workflow" required>
+                            <input type="text" name="department" placeholder="Department" value="ITIS" required>
+                            <input type="text" name="number" placeholder="Cource Number" value="3200" required>
+                            <input type="text" name="courseName" placeholder="Cource Name" value="Security & Privacy" required>
+                            <input type="text" name="reason" placeholder="Reasion for taking" value="My consternation is in cyber security and this is the class where I am going to learn about the security and privacy aspects of the programming world." required>
+                            <button type="button" class="deleteCourse">Delete</button>
+                        </div>
+
+                        <div class="course">
+                            <input type="text" name="department" placeholder="Department" value="ITSC" required>
+                            <input type="text" name="number" placeholder="Cource Number" value="3135" required>
+                            <input type="text" name="courseName" placeholder="Cource Name" value="Software Engineering" required>
+                            <input type="text" name="reason" placeholder="Reasion for taking" value="To build the skills and knowledge of how to work in a group for a project and doing it using github." required>
                             <button type="button" class="deleteCourse">Delete</button>
                         </div>
                     </div>
