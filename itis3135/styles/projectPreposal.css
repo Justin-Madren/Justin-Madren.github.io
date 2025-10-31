@@ -1,0 +1,145 @@
+/* ===========================
+   General Reset and Body
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding: 20px;
+}
+
+/* ===========================
+   Headings (defined only once)
+=========================== */
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    color: #0a9396;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #94d2bd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #005f73;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   Header Styling (use class for special styles)
+=========================== */
+.header-title {
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    background-color: #005f73;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   Main Sections
+=========================== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Lists
+=========================== */
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* ===========================
+   Links
+=========================== */
+a {
+    color: #0a9396;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Images & Figures
+=========================== */
+figure {
+    margin: 15px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #005f73;
+    color: #fff;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Adjust header h1 font-size via class */
+    .header-title {
+        font-size: 1.5em;
+    }
+    
+    section {
+        padding: 15px;
+    }
+}
