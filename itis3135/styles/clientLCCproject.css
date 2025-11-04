@@ -1,0 +1,175 @@
+:root{
+    --CaputMortuum: #4f3130;
+    --MossGreen: #768948;
+    --FernGreen: #607744;
+    --HunterGreen: #34623f;
+    --DarkGreen: #1e2f23;
+    --TaupeGray: #92828d;
+    --Highlight: #92c6b6; /* accent color */
+}
+
+/* ===========================
+   Body
+=========================== */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+    color: var(--DarkGreen);
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===========================
+   Header
+=========================== */
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, var(--HunterGreen), var(--FernGreen));
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--FernGreen), var(--HunterGreen));
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Dividers
+=========================== */
+.divider {
+    max-width: 50%;
+    margin: 25px auto;
+    border-bottom: 4px solid var(--CaputMortuum);
+    border-radius: 5px;
+}
+/* ===========================
+   Main Sections
+=========================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+section {
+    max-width: 75%;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--FernGreen);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+#servicetimes p{
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#location .location-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#location img {
+    max-width: 250px;
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#location .location-text {
+    padding-top: 55px;
+    padding-left: 15px;
+    flex: 1;
+}
+
+
+section:hover {
+    transform: translateY(-5px);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery a img {
+    width: 200px;  /* fixed size for uniformity */
+    height: 150px; /* fixed size for uniformity */
+    object-fit: cover; /* crops to fit */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery a img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Headings */
+h2, h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+h2::after, h3::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--Highlight);
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
+}
+
+/* ===========================
+   Links
+=========================== */
+a {
+    text-decoration: none;
+    color: var(--OffWhite);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--Highlight);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+    section {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .divider {
+        max-width: 70%;
+    }
+}
