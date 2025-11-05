@@ -83,26 +83,35 @@ section {
     box-sizing: border-box;
 }
 
-#location .location-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+/* Shared layout for staff and location sections */
+.staff-content,
+.location-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-#location img {
-    max-width: 250px;
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+/* Image styling */
+.staff-content img,
+.location-content img {
+  max-width: 250px;
+  width: 40%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-#location .location-text {
-    padding-top: 55px;
-    padding-left: 15px;
-    flex: 1;
+/* Text area beside the image */
+.staff-text,
+.location-text {
+  flex: 1;
+  padding-top: 30px;
+  padding-left: 15px;
 }
 
+.staff-text p {
+  margin-bottom: 10px;
+}
 
 section:hover {
     transform: translateY(-5px);
@@ -115,7 +124,7 @@ section:hover {
     justify-content: center;
 }
 
-.gallery a img {
+.gallery img {
     width: 200px;  /* fixed size for uniformity */
     height: 150px; /* fixed size for uniformity */
     object-fit: cover; /* crops to fit */
@@ -124,7 +133,7 @@ section:hover {
     transition: transform 0.3s ease;
 }
 
-.gallery a img:hover {
+.gallery img:hover {
     transform: scale(1.05);
 }
 
