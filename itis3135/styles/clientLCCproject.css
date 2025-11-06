@@ -182,3 +182,49 @@ a:hover {
         max-width: 70%;
     }
 }
+
+/* ===========================
+   Scroll effects (fade and sticky nav)
+   =========================== */
+
+/* Start sections hidden and slide-up when they appear */
+.section-hidden {
+    opacity: 0;
+    /* move further down so the reveal is more obvious */
+    transform: translateY(30px) scale(0.995);
+    /* slower, more noticeable transition */
+    transition: opacity 1s cubic-bezier(.2,.9,.2,1), transform 1s cubic-bezier(.2,.9,.2,1);
+    will-change: opacity, transform;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity 1s cubic-bezier(.2,.9,.2,1), transform 1s cubic-bezier(.2,.9,.2,1);
+}
+
+/* Sticky nav styling (applied when JS adds .nav-sticky) */
+.nav-placeholder { /* placeholder inserted by JS to prevent layout jump */
+    display: block;
+    width: 100%;
+}
+
+.nav-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, var(--HunterGreen), var(--FernGreen));
+    padding: 10px 15px;
+}
+
+/* Ensure links inside a fixed nav look right */
+.nav-sticky a {
+    color: white;
+}
+
+/* Make sure header doesn't visually break when nav becomes fixed; keep heading spacing reasonable */
+.site-title { margin: 0 0 8px 0; }
+
