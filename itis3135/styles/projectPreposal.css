@@ -101,11 +101,10 @@ figure {
     text-align: center;
 }
 
-figure img {
+img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    border: 1px solid #ccc;
 }
 
 figcaption {
@@ -125,6 +124,102 @@ footer {
     border-radius: 8px;
     margin-top: 20px;
 }
+
+/* ===========================
+   Evaluated Section (Green Theme)
+=========================== */
+.evaluated-section-green {
+    background-color: #d9f0e8; /* light green background */
+    border-left: 6px solid #0a9396; /* strong green accent */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluated-section-green .evaluated-heading {
+    color: #05676b; /* darker green for headings */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.evaluated-section-green p,
+.evaluated-section-green li {
+    color: #084c4f; /* slightly darker text for readability */
+}
+
+.evaluated-section-green a {
+    color: #0a9396;
+}
+
+.evaluated-section-green a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Evaluated Section (Yellow Theme)
+=========================== */
+.evaluated-section-yellow {
+    background-color: #fff9db; /* light yellow background */
+    border-left: 6px solid #f0c419; /* strong yellow accent */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluated-section-yellow .evaluated-heading {
+    color: #b38600; /* darker yellow/gold for headings */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.evaluated-section-yellow p,
+.evaluated-section-yellow li {
+    color: #7a5c00; /* slightly darker text for readability */
+}
+
+.evaluated-section-yellow a {
+    color: #f0c419;
+}
+
+.evaluated-section-yellow a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   Evaluated Section (Red Theme)
+=========================== */
+.evaluated-section-red {
+    background-color: #fde2e2; /* light red/pink background */
+    border-left: 6px solid #d62828; /* strong red accent */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.evaluated-section-red .evaluated-heading {
+    color: #9b1c1c; /* darker red for headings */
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.evaluated-section-red p,
+.evaluated-section-red li {
+    color: #6e1111; /* slightly darker text for readability */
+}
+
+.evaluated-section-red a {
+    color: #d62828;
+}
+
+.evaluated-section-red a:hover {
+    text-decoration: underline;
+}
+
+
+
 
 /* ===========================
    Responsive
